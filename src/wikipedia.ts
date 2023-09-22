@@ -62,8 +62,6 @@ export class WikipediaPopDensity {
         let response = await queryDispatcher.query(sparqlQuery);
         let json = await response.json();
 
-        console.log(json);
-
         return json.results.bindings[0].density.value;
     }
 }

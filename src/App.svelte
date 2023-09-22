@@ -127,13 +127,8 @@
 
   async function run() {
     isLocationAllowed = true
-    let density = await calculateDensity()
-    console.log(density)
+    await calculateDensity()
   }
-
-  getGeolocation().then((position) => {
-    console.log(position)
-  })
 
   let formula = "r = \\sqrt{\\frac{17520}{\\pi P_d X_f X_d}}"
   let formula2 = (value: number) => `P_d = ${value} \\frac{\\text{people}}{km^2}`
