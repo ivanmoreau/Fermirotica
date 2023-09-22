@@ -3,7 +3,7 @@ export class WikipediaQID {
 
     async qid(): Promise<string> {
         let promise: Promise<Response> = new Promise((resolve, reject) => {
-            fetch(`http://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=${this.name}&props=descriptions&languages=en&format=json&origin=*`)
+            fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=${this.name}&props=descriptions&languages=en&format=json&origin=*`)
                 .then((response) => {
                     resolve(response);
                 })
